@@ -932,7 +932,8 @@ button {
     gap: 48px;
     margin-bottom: 96px;
     justify-content: center;
-}
+    width: 100%;
+    }
 
 .projects {
     max-width: 288px;
@@ -942,7 +943,8 @@ button {
 .overlay {
     position: relative;
     overflow: hidden;
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     height: 300px;
 }
 
