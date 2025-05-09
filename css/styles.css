@@ -397,6 +397,7 @@ button {
 /* modal window  */
 
 .modal-overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -421,7 +422,7 @@ button {
         box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
         top: 50%;
         left: 50%;
-        max-width: 288px;
+        width: 288px;
         min-height: 623px;
         transform: translate(-50%, -50%);
         padding: 72px 16px 24px 16px;
@@ -887,8 +888,6 @@ button {
         }
 
         .our-team-mentors {
-            /* flex-basis: calc((100% - 24px) / 2);
-            max-width: 264px; */
             width: 264px;
         }
         .our-team {
@@ -918,7 +917,6 @@ button {
        
      }
     .our-team-mentors {
-        /* flex-basis: calc((100% - 72px) / 4); 3 gaps по 24px */
         width: 264px;
         
     }
@@ -1176,23 +1174,37 @@ button {
             padding: 100px 0;
         }
         .text-footer {
-            max-width: 264px;
+            width: 264px;
         }
         .footer-elements {
-            display: flex;
-            justify-content: flex-start;
             align-items: baseline;
+            flex-direction: none;
+            flex-wrap: nowrap;
+            padding: 0;
+   
+            align-items: flex-start;
+            gap: 0;
+            /* display: flex;
+            justify-content: flex-start;
+            align-items: baseline; */
         
         }
          .footer-block {
-            display: flex;
+            /* display: flex;
             flex-direction: column;
             gap: 16px;
-            align-items: baseline;
+            align-items: baseline; */
+            margin-right: 120px;
+            margin-left: 0;
+            padding-left: 0;
         }
         
+     
         .social-media-footer {
             transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .icons-footer {
+            gap: 16px;
         }
           
         .social-media-footer:hover,
@@ -1202,6 +1214,7 @@ button {
         }
         .input-in-footer {
             width: 264px;
+            border: 1px solid #FFFFFF;
         }
         .input-in-footer:focus {
             border: 1px solid #4D5AE5;
@@ -1214,17 +1227,22 @@ button {
 
          .subscribe {
              display: flex;
-             align-items: center;
-             justify-content: center;
+             flex-direction: row;
+             margin-left: 80px;
+             /* align-items: start; */
+             /* justify-content: center; */
              gap: 24px;
 
          }
 
-         .footer-block:first-child {
+         /* .footer-block:first-child {
           margin-right: 120px;
         }
         .footer-block:last-child {
          margin-left: 80px;
          }
-        
+        .form-label {
+            margin: 0;
+
+        } */
     }

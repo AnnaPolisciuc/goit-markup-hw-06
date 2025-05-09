@@ -99,6 +99,7 @@
   </ul>
 </div>
 </div>
+
     </header>
     
     <main>
@@ -107,8 +108,9 @@
 
         <section class="title">
             <div class="container">
+             
 <h1 class="site-title">Effective Solutions for Your Business</h1>
-<button class="button" type="button">Order Service</button>
+<button class="button button-in-hero" type="button">Order Service</button>
             </div>
         </section>
 
@@ -595,12 +597,13 @@
     </footer>
 
 
-
+  
 
     <!-- Modal Window  -->
 
-    <div class="modal-overlay">
+    <div class="modal-overlay is-open">
       <div class="modal">
+        <i class="fa fa-times close" aria-hidden="true"></i>
       <button type="button" class="popup-close">  
         <svg class="svg-close" width="8" height="8">
         <use href="./images/icons.svg#icon-close"></use>
@@ -702,6 +705,42 @@
     
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+    $(document).ready(function () {
+      const modal = $('.modal-overlay');
+    
+      function setModal(display) {
+        modal.css('display', display);
+      }
+    
+      // Открытие по кнопке
+      $('.button-in-hero').click(function () {
+        setModal('block');
+      });
+    
+      // Закрытие по кнопке с классом popup-close
+      $('.popup-close').click(function () {
+        setModal('none');
+      });
+    
+      // Клик вне модального окна — закрыть
+      $(modal).click(function (e) {
+        const target = e.target;
+        if (!$('.modal').is(target) && $('.modal').has(target).length === 0) {
+          setModal('none');
+        }
+      });
+    
+      // Закрытие по клавише ESC
+      $(document).keydown(function (e) {
+        if (e.which === 27) {
+          setModal('none');
+        }
+      });
+    });
+    </script>
 
 </body>
 </html> 
