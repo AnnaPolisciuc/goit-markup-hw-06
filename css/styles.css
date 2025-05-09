@@ -9,7 +9,7 @@ html, body {
     padding: 0;
     width: 100%;
   }
-  
+
 *, 
 *::before, 
 *::after {
@@ -421,10 +421,10 @@ button {
         box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
         top: 50%;
         left: 50%;
-        width: 288px;
+        max-width: 288px;
         min-height: 623px;
         transform: translate(-50%, -50%);
-        padding: 72px 16px 16px 16px;
+        padding: 72px 16px 24px 16px;
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -947,8 +947,22 @@ button {
 }
 
 .overlay-text {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 32px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    background-color: #4d5ae5;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .our-projects {
     border-bottom: 1px solid #E5E5E5;
@@ -990,22 +1004,7 @@ button {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);  
      }
 
-    .overlay-text {
-    position: absolute;
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-    line-height: 150%;
-    letter-spacing: 0.02em;
-    color: #F4F4FD;
-    padding: 40px 32px;
-    top: 0;
-    left: 0;
-    transform: translateY(100%);
-    background-color: #4d5ae5;
-    height: 100%;
-    width: 100%;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-    }
+
     .our-portfolio {
         display: flex;
         flex-direction: row;
@@ -1018,6 +1017,7 @@ button {
         flex-basis: calc((100% - 48px)/3);
         max-width: 360px;
     }
+  
 }
 
 
