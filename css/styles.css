@@ -260,7 +260,7 @@ button {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-
+    z-index: 999;
 }
 
 .mobile-menu.is-open {
@@ -368,7 +368,6 @@ button {
     align-items: center;
     justify-content: center;
     gap: 24px;
-    /* margin-top: 48px; */
 }
 
 .social-media-element {
@@ -627,7 +626,7 @@ button {
     color: #FFFFFF;
     margin-left: auto;
     margin-right: auto;
-    padding: 188px 0; 
+    padding: 72px 0; 
     max-width: 1440px;
 }
 
@@ -655,6 +654,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)), 
         url(../images/background-tablet.jpg);
+        padding: 112px 0; 
     }
 }
 
@@ -665,6 +665,8 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)), 
         url(../images/background-tablet-2x.jpg);
+        padding: 112px 0; 
+       
     }
 }
 
@@ -686,6 +688,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)), 
         url(../images/background-dekstop.jpg);
+        padding: 188px 0; 
     }
 }
 
@@ -696,6 +699,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)), 
         url(../images/background-dekstop-2x.jpg);
+        padding: 188px 0; 
     }
 }
 
@@ -706,14 +710,15 @@ button {
 .box {
     display: none;
 }
+.section {
+    padding: 96px 0;
+}
 
 .about-us {
     max-width: 100%;
     display: flex;
     flex-direction: column;
     gap: 72px;
-    margin-top: 96px;
-    margin-bottom: 96px;
     justify-content: center;
 }
 
@@ -749,14 +754,17 @@ button {
     align-self: stretch; 
   }
 
-@media screen and (min-width: 768px) and (max-width: 1158px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+    .section {
+        padding: 96px 0;
+    }
+ 
     .about-us {
         max-width: 736px;
         flex-direction: row;
         flex-wrap: wrap;
         column-gap:24px;
         row-gap: 72px;
-        margin: 96px auto;
     }
     .about-us-item {
         flex-basis: calc((100% - 24px) / 2);
@@ -772,6 +780,9 @@ button {
 
 
 @media screen and (min-width: 1158px) {
+    .section {
+        padding: 120px 0;
+    }
     .about-us-item {
         max-width: 264px;
         display: flex;
@@ -800,7 +811,6 @@ button {
     .about-us {
         gap: 24px;
         flex-direction: row;
-        margin: 120px auto;
     }
     .description {
         font-weight: 400;
@@ -810,15 +820,15 @@ button {
 
 /* Our Team Section  */
 
+
     .our-team {
         background-color: #F4F4FD;
         list-style: none;
-        padding-bottom: 92px;
     }
 
     .our-team-mentors {
         border-radius: 0 0 4px 4px;
-        padding: 0px 0px 32px 0px;
+        /* padding: 0px 0px 32px 0px; */
         width: 264px;
         height: 428px;
         box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -833,12 +843,8 @@ button {
         gap: 72px;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 72px;
-        margin-bottom: 92px;
         margin-left:auto;
         margin-right: auto;
-        padding: 0 28px;
-        max-width: 1158px;
     }
 
     .name-post {
@@ -869,7 +875,7 @@ button {
         line-height: 1.11;
         text-transform: capitalize;
         margin-bottom: 72px;
-        padding-top: 72px;
+        /* padding-top: 72px; */
     }
 
 
@@ -889,6 +895,7 @@ button {
     }
 
 @media screen and (min-width: 1158px) {
+ 
     .our-team-mentors:hover,
     .our-team-mentors:focus {
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -905,9 +912,6 @@ button {
     }
      .our-mentors {
         gap: 24px;
-        padding: 0 0 120px 0;
-        
-       
      }
     .our-team-mentors {
         width: 264px;
@@ -915,9 +919,6 @@ button {
     }
     .thirt-title {
     text-align: center;
-    }
-    .our-team {
-        padding-bottom: 0;
     }
 }
 
@@ -927,7 +928,6 @@ button {
     display: flex;
     flex-direction: column;
     gap: 48px;
-    margin-bottom: 96px;
     justify-content: center;
     width: 100%;
     }
@@ -1026,7 +1026,7 @@ button {
 .footer {
     background-color: #2E2F42;
     color: #F4F4FD;
-    padding: 96px 16px;
+    padding: 96px 0;
 }
 .footer-p {
     font-weight: 500;
@@ -1131,15 +1131,14 @@ button {
     }
 
     @media screen and (min-width: 768px) and (max-width: 1158px) {
-        .footer {
-            padding-left: 108px;
-        }
+   
         .footer-elements {
             flex-direction: row;
             flex-wrap: wrap;
             column-gap:24px;
             row-gap: 72px;
             justify-content: flex-start;
+            width: 564px;
         }
 
         .text-footer {
